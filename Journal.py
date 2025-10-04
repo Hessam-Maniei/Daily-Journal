@@ -15,3 +15,4 @@ def create_journal():
 if __name__ == "__main__":
     create_journal()
 
+Update journal.py with new comment
