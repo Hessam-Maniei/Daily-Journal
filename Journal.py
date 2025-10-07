@@ -22,3 +22,6 @@ if __name__ == "__main__":
 
 # Test commit from VS Code
 
+git add .
+git commit -m "Add journal entry for $(date +%Y-%m-%d)"
+git push
