@@ -1,4 +1,4 @@
-name: Daily-Journal
+name: Run Daily Journal
 
 on:
   schedule:
@@ -21,9 +21,8 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Run journal.py      # ⬅️ This is the part you’re asking about
-        run: |
-          python3 journal.py      # ⬅️ Here you write this line
+      - name: Run journal.py
+        run: python Daily-Journal/journal.py
 
       - name: Commit and push changes
         run: |
