@@ -1,3 +1,5 @@
+.github/workflows/journal.yml
+
 name: Daily Journal
 
 on:
