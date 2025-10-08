@@ -20,8 +20,4 @@ def create_journal():
 if __name__ == "__main__":
     create_journal()
 
-# Test commit from VS Code
 
-git add .
-git commit -m "Add journal entry for $(date +%Y-%m-%d)"
-git push
