@@ -2,7 +2,7 @@ name: Daily-Journal
 
 on:
   schedule:
-    - cron: "0 9 * * *"  # runs daily at 1:00 UTC
+    - cron: "0 1 * * *"  # runs daily at 1:00 UTC
   workflow_dispatch:
 
 permissions:
