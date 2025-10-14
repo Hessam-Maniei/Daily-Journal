@@ -74,3 +74,19 @@ If you'd like, I can:
 - Add a minimal `requirements.txt` or a small test harness for the scripts.
 
 Tell me which of the above you'd like me to do next.
+
+
+# Removing wrong extra folder(Delete the wrong folder github/workflows)
+
+Make sure your terminal prompt looks something like:
+hessam@Hessams-Air Daily-Journal %
+
+# go to your main repo root just in case
+cd ~/path/to/Daily-Journal
+
+# check that folder exists
+ls github
+
+# if you see "workflows" there, delete it
+rm -rf github
+
