@@ -82,7 +82,7 @@ Make sure your terminal prompt looks something like:
 hessam@Hessams-Air Daily-Journal %
 
 # go to your main repo root just in case
-cd ~/path/to/Daily-Journal
+hessam@Hessams-Air Daily-Journal %
 
 # check that folder exists
 ls github
