@@ -2,7 +2,7 @@
 
 Small personal journal utilities and example workflows. This repository contains simple Python helpers to create daily Markdown journal entries and a small file organizer script, plus a couple of GitHub Actions/workflow files.
 
-## Contents
+### Contents
 
 - `Journal.py` - Creates a new markdown file in the `journal/` folder named with today's date (YYYY-MM-DD) and seeds it with a short template.
 - `<<<<<<file_Organizer.py` - A simple script to move files into folders grouped by extension. Note: this filename contains leading `<` characters which can make it awkward to call from a shell; see the "Notes" section below.
@@ -10,7 +10,7 @@ Small personal journal utilities and example workflows. This repository contains
 - `.github/workflows/` - CI/workflow files (may include automation for journal or other tasks).
 - `LICENSE` - Project license.
 
-## Requirements
+### Requirements
 
 - Python 3.8 or newer
 
