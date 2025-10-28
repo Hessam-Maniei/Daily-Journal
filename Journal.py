@@ -1,23 +1,21 @@
+name: Daily Commit
 
+on:
+  workflow_dispatch:  # lets you run it manually
+  schedule:
+    - cron: "0 9 * * *"  # runs every day at 9:00 UTC
 
-from datetime import datetime
-import os
+jobs:
+  run_journal:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-def create_journal():
-    today = datetime.now().strftime("%Y-%m-%d")
-    folder = "journal"
-    os.makedirs(folder, exist_ok=True)
-    
-    filename = os.path.join(folder, f"{today}.md")
-    if not os.path.exists(filename):
-        with open(filename, "w") as f:
-            f.write(f"# Journal Entry - {today}\n\n")
-            f.write("What I learned today:\n- \n")
-        print(f"Created new journal entry: {filename}")
-    else:
-        print(f"Journal entry already exists: {filename}")
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
 
-if __name__ == "__main__":
-    create_journal()
-
-
+      - name: Run Journal script
+        run: python Journal.py
