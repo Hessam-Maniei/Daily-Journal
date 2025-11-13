@@ -1,18 +1,21 @@
-from datetime import datetime
-import os
+name: Daily Commit
 
-def create_journal():
-    today = datetime.now().strftime("%Y-%m-%d")
-    folder = "journal"
-    os.makedirs(folder, exist_ok=True)
+on:
+  workflow_dispatch:  # lets you run it manually
+  schedule:
+    - cron: "0 9 * * *"  # runs every day at 9:00 UTC
 
-    filename = os.path.join(folder, f"{today}.md")
-    with open(filename, "a") as f:
-        f.write(f"\nUpdate at {datetime.now().strftime('%H:%M:%S')}\n")
+jobs:
+  run_journal:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    print(f"Updated journal entry: {filename}")
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
 
-if __name__ == "__main__":
-    create_journal()
-
-Update journal.py with new comment
+      - name: Run Journal script
+        run: python Journal.py
