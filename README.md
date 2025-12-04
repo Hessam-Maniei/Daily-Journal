@@ -1,3 +1,4 @@
+the director should be changed
 ## Daily-Journal
 
 Small personal journal utilities and example workflows. This repository contains simple Python helpers to create daily Markdown journal entries and a small file organizer script, plus a couple of GitHub Actions/workflow files.
